@@ -1,0 +1,142 @@
+{
+  "name": "@makenew/serverless-nodejs",
+  "version": "0.0.0",
+  "description": "Package skeleton for an Node.js Serverless project.",
+  "main": "dist/index.js",
+  "module": "index.js",
+  "sideEffects": false,
+  "keywords": [
+    "node"
+  ],
+  "homepage": "https://github.com/makenew/serverless-nodejs",
+  "bugs": "https://github.com/makenew/serverless-nodejs/issues",
+  "repository": "makenew/serverless-nodejs",
+  "license": "MIT",
+  "author": {
+    "name": "Evan Sosenko",
+    "email": "razorx@evansosenko.com"
+  },
+  "files": [
+    "yarn.lock",
+    "index.js",
+    "lib",
+    "handlers",
+    "data",
+    "dist",
+    "docs"
+  ],
+  "scripts": {
+    "test": "nyc ava",
+    "pretest": "npm-run-all lint",
+    "posttest": "serverless package",
+    "test:update": "ava --update-snapshots",
+    "test:watch": "ava --watch",
+    "test:inspect": "node --inspect node_modules/ava/profile",
+    "test:inspect:watch": "nodemon --inspect node_modules/ava/profile",
+    "lint": "gulp lint",
+    "clean": "del dist",
+    "build": "npm-run-all --parallel build:*",
+    "prebuild": "npm-run-all clean",
+    "build:index": "babel --source-maps --out-dir dist index.js",
+    "build:lib": "babel --source-maps --ignore='**/*.spec.js' --out-dir dist/lib lib",
+    "build:handlers": "babel --source-maps --ignore='**/*.spec.js' --out-dir dist/handlers handlers",
+    "dist": "npm-run-all build",
+    "predist": "npm-run-all test",
+    "preversion": "npm-run-all dist",
+    "postversion": "git push && git push --tags",
+    "deploy": "npm-run-all --serial deploy:domain deploy:stack",
+    "deploy:domain": "serverless create_domain",
+    "deploy:stack": "serverless deploy --aws-s3-accelerate",
+    "release:test": "git tag --force stage.test && git push --force origin stage.test",
+    "release:staging": "git tag --force stage.stg && git push --force origin stage.stg",
+    "release:production": "git tag --force stage.prod && git push --force origin stage.prod",
+    "example": "babel-node examples",
+    "example:watch": "nodemon --exec babel-node examples",
+    "example:inspect": "babel-node --inspect examples",
+    "example:inspect:watch": "nodemon --exec babel-node --inspect examples",
+    "watch": "gulp watch",
+    "format": "standard --fix",
+    "report": "nyc report"
+  },
+  "babel": {
+    "plugins": [
+      "source-map-support"
+    ],
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "ava": {
+    "files": [
+      "**/*.spec.js",
+      "!dist/**/*",
+      "!package/**/*"
+    ],
+    "require": [
+      "@babel/register"
+    ]
+  },
+  "nyc": {
+    "exclude": [
+      "**/index.js",
+      "dist/**/*.js",
+      "package/**/*.js",
+      "examples/**/*.js",
+      "**/*.spec.js"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text"
+    ]
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.spec.js",
+      "test/",
+      "tmp/"
+    ]
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "dependencies": {
+    "aws-sdk": "2.290.0",
+    "source-map-support": "^0.5.9"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.1",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "@meltwater/examplr": "^4.2.0",
+    "ava": "1.0.0-rc.1",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-source-map-support": "^2.0.1",
+    "del-cli": "^1.0.0",
+    "gulp": "^4.0.0",
+    "gulp-cli": "^2.0.0",
+    "gulp-jsonlint": "^1.1.2",
+    "gulp-standard": "^12.0.0",
+    "gulp-watch": "^5.0.0",
+    "gulplog": "^1.0.0",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.1.2",
+    "nyc": "^13.0.1",
+    "serverless": "^1.32.0",
+    "serverless-domain-manager": "^2.6.6",
+    "serverless-offline": "^3.25.15",
+    "serverless-webpack": "^5.2.0",
+    "standard": "^12.0.1",
+    "webpack": "^4.20.2",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
