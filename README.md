@@ -198,6 +198,17 @@ This will push a new git tag which will trigger a CircleCI publish job.
 
 [npm-version]: https://docs.npmjs.com/cli/version
 
+### Deployment
+
+Deployment is triggered on CircleCI when a git tag matching
+`stage.<environment>` is created or updated.
+
+Use `yarn run release:<environment>` to do this automatically, e.g.,
+
+```
+$ yarn run release:test
+```
+
 ## CircleCI
 
 _CircleCI should already be configured: this section is for reference only._
