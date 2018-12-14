@@ -202,7 +202,6 @@ This will push a new git tag which will trigger a CircleCI publish job.
 
 Deployment is triggered on CircleCI when a git tag matching
 `stage.<environment>` is created or updated.
-
 Use `yarn run release:<environment>` to do this automatically, e.g.,
 
 ```
