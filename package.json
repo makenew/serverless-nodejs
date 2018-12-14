@@ -34,6 +34,7 @@
     "test:inspect": "node --inspect node_modules/ava/profile",
     "test:inspect:watch": "nodemon --inspect node_modules/ava/profile",
     "lint": "gulp lint",
+    "lint:watch": "gulp",
     "clean": "del dist",
     "build": "npm-run-all --parallel build:*",
     "prebuild": "npm-run-all clean",
@@ -54,7 +55,6 @@
     "example:watch": "nodemon --exec babel-node examples",
     "example:inspect": "babel-node --inspect examples",
     "example:inspect:watch": "nodemon --exec babel-node --inspect examples",
-    "watch": "gulp watch",
     "format": "standard --fix",
     "report": "nyc report"
   },
