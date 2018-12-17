@@ -1,6 +1,6 @@
 {
   "name": "@makenew/serverless-nodejs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Package skeleton for an Node.js Serverless project.",
   "main": "dist/index.js",
   "module": "index.js",
