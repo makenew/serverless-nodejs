@@ -143,7 +143,7 @@ $ yarn add @makenew/serverless-nodejs
 ### Quickstart
 
 ```
-$ git clone https://github.com/makenew/serverless-nodejs.git
+$ git clone https://github.com/makenew/serverless-nodejs.git serverless-nodejs
 $ cd serverless-nodejs
 $ nvm install
 $ yarn install
