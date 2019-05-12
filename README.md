@@ -4,7 +4,7 @@
 [![Codecov](https://img.shields.io/codecov/c/github/makenew/serverless-nodejs.svg)](https://codecov.io/gh/makenew/serverless-nodejs)
 [![CircleCI](https://img.shields.io/circleci/project/github/makenew/serverless-nodejs.svg)](https://circleci.com/gh/makenew/serverless-nodejs)
 
-Package skeleton for an Node.js Serverless project on AWS Lambda.
+Package skeleton for a Node.js Serverless project on AWS Lambda.
 
 ## Description
 
