@@ -123,7 +123,7 @@ jobs:
     parameters:
       tag:
         type: string
-        default: '8.10'
+        default: carbon
     executor:
       name: node
       tag: << parameters.tag >>
@@ -152,7 +152,7 @@ references:
         ignore: /.*/
       tags:
         only: /stage.*/
-  deploy_tag: &deploy_tag '8.10'
+  deploy_tag: &deploy_tag 'carbon'
 
 workflows:
   default:
