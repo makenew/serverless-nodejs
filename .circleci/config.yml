@@ -108,7 +108,7 @@ jobs:
     description: Publish Node.js package
     executor:
       name: node
-      tag: carbon
+      tag: dubnium
     steps:
       - setup
       - install
@@ -123,7 +123,7 @@ jobs:
     parameters:
       tag:
         type: string
-        default: carbon
+        default: dubnium
     executor:
       name: node
       tag: << parameters.tag >>
@@ -152,7 +152,7 @@ references:
         ignore: /.*/
       tags:
         only: /stage.*/
-  deploy_tag: &deploy_tag 'carbon'
+  deploy_tag: &deploy_tag 'dubnium'
 
 workflows:
   default:
@@ -175,16 +175,6 @@ workflows:
           is_alpine: true
           <<: *filters
       - test:
-          name: test-carbon
-          tag: carbon
-          upload_coverage: true
-          <<: *filters
-      - test:
-          name: test-carbon-alpine
-          tag: carbon-alpine
-          is_alpine: true
-          <<: *filters
-      - test:
           name: test-lambda
           tag: *deploy_tag
           <<: *filters
@@ -198,8 +188,6 @@ workflows:
             - test-latest-alpine
             - test-dubnium
             - test-dubnium-alpine
-            - test-carbon
-            - test-carbon-alpine
   serverless:
     jobs:
       - test:
