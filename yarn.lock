@@ -1055,9 +1055,9 @@
     semver "^6.1.1"
 
 "@serverless/enterprise-plugin@^1.3.1":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@serverless/enterprise-plugin/-/enterprise-plugin-1.3.2.tgz#e1cb7b49c2fd80d5369218149bb61562ae05f885"
-  integrity sha512-WEIpW8jrdIFbkLSu7KMAScjqY0iAO5StpyE8wLR93ddMRL9YS6mE0EPCwp97yLbCj1OIe7muhSu1hM53+mcILg==
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/@serverless/enterprise-plugin/-/enterprise-plugin-1.3.4.tgz#3583d346207d7b124186a566763c3b242e26ddaa"
+  integrity sha512-Cj1x52yTc0n5A04hcct4O4LWgL4+ZzR6fTwLSaTpk/ozkZSI32dcrf3y0VzwSgJNdIY9hN2qJl1Bo+iAdfwtsQ==
   dependencies:
     "@serverless/event-mocks" "^1.1.1"
     "@serverless/platform-sdk" "^2.0.3"
@@ -1109,9 +1109,9 @@
     write-file-atomic "^2.4.2"
 
 "@serverless/template@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@serverless/template/-/template-1.0.0.tgz#e51ab3b0a8914ef7d641f52116878dc055440655"
-  integrity sha512-N30KloYkRLVSmfFn5wJczkl+NUi1gy6D5o1/4vJ9L+g+1UuHGZ3MiMt5uxNZjklbaJypXOR+SFF0JjKz3YYD1w==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@serverless/template/-/template-1.0.1.tgz#2e00ad0deca62f92d2eaded19b8e43335491ae46"
+  integrity sha512-rXnVDzafGTRP29TcrzLpcIkqgO1PmdrZTqWLBT8k+2rpN1Lf2DS+Rmd50vGfe+BhfPZM46sBbOrS16RrFcElQQ==
   dependencies:
     "@serverless/core" "^1.0.0"
     graphlib "^2.1.7"
@@ -1916,9 +1916,9 @@ aws-sdk@2.437.0:
     xml2js "0.4.19"
 
 aws-sdk@^2.177.0, aws-sdk@^2.496.0:
-  version "2.500.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.500.0.tgz#2e4c5b7027c2d583fd0018f0aeed712cea135f7f"
-  integrity sha512-zVSO6STyBbbn5foqiH8Z0agpudtOibSRLhTXNkVnJTwJwYK5f9mv5WKOKcLivx/fvXwVE8QehZWyE3vBzl8I+w==
+  version "2.503.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.503.0.tgz#983b8c03aa919060a81127cb9d94fbb1667f4cf2"
+  integrity sha512-DPwRxhPYCGNvKL9rUhpAoOVpMRyISbVMlXykLQknYo7wyOI+jYcyA7t8H7IFPAqj4ZG+R+Au9tO/KT4im+2gbg==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -2414,9 +2414,9 @@ camelcase@^5.0.0, camelcase@^5.3.1:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30000984:
-  version "1.0.30000985"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000985.tgz#0eb40f6c8a8c219155cbe43c4975c0efb4a0f77f"
-  integrity sha512-1ngiwkgqAYPG0JSSUp3PUDGPKKY59EK7NrGGX+VOxaKCNzRbNc7uXMny+c3VJfZxtoK3wSImTvG9T9sXiTw2+w==
+  version "1.0.30000988"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000988.tgz#742f35ec1b8b75b9628d705d7652eea1fef983db"
+  integrity sha512-lPj3T8poYrRc/bniW5SQPND3GRtSrQdUM/R4mCYTbZxyi3jQiggLvZH4+BYUuX0t4TXjU+vMM7KFDQg+rSzZUQ==
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -3557,9 +3557,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.191:
-  version "1.3.200"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.200.tgz#78fb858b466269e8eb46d31a52562f00c865127f"
-  integrity sha512-PUurrpyDA74MuAjJRD+79ss5BqJlU3mdArRbuu4wO/dt6jc3Ic/6BDmFJxkdwbfq39cHf/XKm2vW98XSvut9Dg==
+  version "1.3.206"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.206.tgz#f72a8694dce5c669170c78097177d7b601977c10"
+  integrity sha512-djq9Ehxs2rwPh7pyY1GMf8vkOWPoK8eoMp913E4t0UaEXvbnOsiSowBBHI8YoN4aKVQJjvxQp5I0LdZkT3Uzmw==
 
 elliptic@^6.0.0:
   version "6.5.0"
@@ -3982,9 +3982,9 @@ estraverse@^4.0.0, estraverse@^4.1.0, estraverse@^4.1.1:
   integrity sha1-De4/7TH81GlhjOc0IJn8GvoL2xM=
 
 esutils@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
-  integrity sha1-Cr9PHKpbyx96nYrMbepPqqBLrJs=
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
+  integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
 etag@~1.8.1:
   version "1.8.1"
@@ -8857,9 +8857,9 @@ serverless-webpack@^5.2.0:
     ts-node "^3.2.0"
 
 serverless@^1.32.0:
-  version "1.48.4"
-  resolved "https://registry.yarnpkg.com/serverless/-/serverless-1.48.4.tgz#fb01499fa78340cd170130e30cc0d0d62a98b4cb"
-  integrity sha512-Gx88FH968lbvpfD8xwv2dsYQnDQcSXDo07nXHAvKY+FPrQOMleuePR+gqJ53ZotWs+WBjkVaFYCqLNQKmkjdxQ==
+  version "1.49.0"
+  resolved "https://registry.yarnpkg.com/serverless/-/serverless-1.49.0.tgz#a4c8353c70db6dfe65018bb5e43ea5f44bc43795"
+  integrity sha512-rDMrhfJVs+vLmB8djU7BFXshLN3JOplSe3NsGAqK8akbuEg8ab6SNYoJ4qpEWYzoes74DjthDPZc3zfNkrPOXQ==
   dependencies:
     "@serverless/cli" "^1.0.1"
     "@serverless/enterprise-plugin" "^1.3.1"
@@ -8972,9 +8972,9 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   integrity sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
 
 simple-git@^1.118.0:
-  version "1.122.0"
-  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-1.122.0.tgz#33b2d3a760aa02df470c79fbab5413d4f4e68945"
-  integrity sha512-plTwhnkIHrw2TFMJbJH/mKwWGgFbj03V9wcfBKa4FsuvgJbpwdlSJnlvkIQWDV1CVLaf2Gl6zSNeRRnxBRhX1g==
+  version "1.124.0"
+  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-1.124.0.tgz#10a73cc1af303832b5c11720d4256e134fba35ca"
+  integrity sha512-ks9mBoO4ODQy/xGLC8Cc+YDvj/hho/IKgPhi6h5LI/sA+YUdHc3v0DEoHzM29VmulubpGCxMJUSFmyXNsjNMEA==
   dependencies:
     debug "^4.0.1"
 
@@ -10326,9 +10326,9 @@ webpack-sources@^1.3.0:
     source-map "~0.6.1"
 
 webpack@^4.20.2:
-  version "4.37.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.37.0.tgz#3508ef10f7996612c2be6026076d89760f776f54"
-  integrity sha512-iJPPvL7XpbcbwOthbzpa2BSPlmGp8lGDokAj/LdWtK80rsPoPOdANSbDBf2GAVLKZD3GhCuQ/gGkgN9HWs0Keg==
+  version "4.38.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.38.0.tgz#6d77108404b08883c78f4e7e45a43c4e5c47c931"
+  integrity sha512-lbuFsVOq8PZY+1Ytz/mYOvYOo+d4IJ31hHk/7iyoeWtwN33V+5HYotSH+UIb9tq914ey0Hot7z6HugD+je3sWw==
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"
