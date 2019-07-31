@@ -14,7 +14,6 @@ provider:
   region: ${env:AWS_DEFAULT_REGION, 'us-east-1'}
   stage: ${opt:stage, env:SERVERLESS_STAGE, 'dev'}
   logRetentionInDays: 30
-
   environment:
     NODE_ENV: production
 
