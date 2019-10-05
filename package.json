@@ -108,7 +108,7 @@
     "node": ">=10.15.0"
   },
   "dependencies": {
-    "aws-sdk": "2.437.0",
+    "aws-sdk": "2.488.0",
     "source-map-support": "^0.5.9"
   },
   "devDependencies": {
