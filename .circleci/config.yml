@@ -108,7 +108,7 @@ jobs:
     description: Publish Node.js package
     executor:
       name: node
-      tag: dubnium
+      tag: erbium
     steps:
       - setup
       - install
@@ -123,7 +123,7 @@ jobs:
     parameters:
       tag:
         type: string
-        default: dubnium
+        default: erbium
     executor:
       name: node
       tag: << parameters.tag >>
@@ -152,7 +152,7 @@ references:
         ignore: /.*/
       tags:
         only: /stage.*/
-  deploy_tag: &deploy_tag 'dubnium'
+  deploy_tag: &deploy_tag 'erbium'
 
 workflows:
   default:
@@ -166,12 +166,12 @@ workflows:
           is_alpine: true
           <<: *filters
       - test:
-          name: test-dubnium
-          tag: dubnium
+          name: test-erbium
+          tag: erbium
           <<: *filters
       - test:
-          name: test-dubnium-alpine
-          tag: dubnium-alpine
+          name: test-erbium-alpine
+          tag: erbium-alpine
           is_alpine: true
           <<: *filters
       - test:
@@ -186,8 +186,8 @@ workflows:
           requires:
             - test-latest
             - test-latest-alpine
-            - test-dubnium
-            - test-dubnium-alpine
+            - test-erbium
+            - test-erbium-alpine
   serverless:
     jobs:
       - test:
