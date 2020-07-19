@@ -143,6 +143,6 @@
     "serverless-webpack": "^5.2.0",
     "standard": "^14.3.1",
     "webpack": "^4.20.2",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-node-externals": "^2.5.0"
   }
 }
