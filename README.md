@@ -211,10 +211,10 @@ Use the [`npm version`][npm-version] command to release a new version.
 This will push a new git tag which will trigger a CircleCI publish job.
 
 Publishing may be triggered using on the web
-using a [workflow_dispatch on GitHub Actions].
+using a [version workflow_dispatch on GitHub Actions].
 
 [npm-version]: https://docs.npmjs.com/cli/version
-[workflow_dispatch on GitHub Actions]: https://github.com/makenew/serverless-nodejs/actions?query=workflow%3Aversion
+[version workflow_dispatch on GitHub Actions]: https://github.com/makenew/serverless-nodejs/actions?query=workflow%3Aversion
 
 ### Deployment
 
@@ -225,6 +225,12 @@ Use `yarn run release:<environment>` to do this automatically, e.g.,
 ```
 $ yarn run release:test
 ```
+
+Releases may be triggered using on the web
+using a [release workflow_dispatch on GitHub Actions].
+
+[npm-version]: https://docs.npmjs.com/cli/version
+[release workflow_dispatch on GitHub Actions]: https://github.com/makenew/serverless-nodejs/actions?query=workflow%3Arelease
 
 ## CircleCI
 
