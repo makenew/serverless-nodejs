@@ -238,7 +238,7 @@ The following environment variables must be set on [CircleCI]:
 - `AWS_ACCESS_KEY_ID`: AWS access key ID.
 - `AWS_SECRET_ACCESS_KEY`: AWS secret access key.
 
-These may be set manually or by running the script `./circleci/envvars.sh`.
+These may be set manually or by running the script `./.circleci/envvars.sh`.
 
 [CircleCI]: https://circleci.com/
 
