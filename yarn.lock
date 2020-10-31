@@ -2390,7 +2390,7 @@ ava@^3.3.0:
     write-file-atomic "^3.0.3"
     yargs "^16.0.3"
 
-aws-sdk@2.712.0, aws-sdk@^2.624.0, aws-sdk@^2.755.0, aws-sdk@^2.781.0:
+aws-sdk@2.712.0, aws-sdk@^2.624.0, aws-sdk@^2.756.0, aws-sdk@^2.781.0:
   version "2.712.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.712.0.tgz#828d6ef7556f4b5098c880469ff72195a83f9d66"
   integrity sha512-C3SLWanFydoWJwtKNi73BG9uB6UzrUuECaAiplOEVBltO/R4sBsHWhwTBuxS02eTNdRrgulu19bJ5RWt+OuXiA==
@@ -9669,13 +9669,13 @@ serialize-javascript@^4.0.0:
   dependencies:
     randombytes "^2.1.0"
 
-serverless-domain-manager@^4.2.0:
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/serverless-domain-manager/-/serverless-domain-manager-4.2.3.tgz#634982b78e7ae3f49a3c0b1eefd720f73579297d"
-  integrity sha512-qZJwl98TQ6V0YtCnjywpdoruyFUdCprm55tUyF7Hecd5S3QJg5tovXCg2bTnmt0pieGHut4l9oqBdkcOPiGzjg==
+serverless-domain-manager@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/serverless-domain-manager/-/serverless-domain-manager-5.0.0.tgz#6120580006d1cb33f615f6fbb83affbf075c9782"
+  integrity sha512-bE+mFd0sXp455LZQ46F1HyQvaFmndISt/fBfxcHZR+ZSt0m28ryGl5satGFesY37EMd7oLNap0AcumQzldp53Q==
   dependencies:
-    aws-sdk "^2.755.0"
-    chalk "^2.4.2"
+    aws-sdk "^2.756.0"
+    chalk "^4.1.0"
 
 serverless-offline@^6.1.2:
   version "6.8.0"
