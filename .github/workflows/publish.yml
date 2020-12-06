@@ -88,3 +88,16 @@ jobs:
         if: ${{ endsWith(github.ref, format('v{0}', steps.published-version.outputs.version)) == false }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+          registry-url: https://npm.pkg.github.com
+      - name: Release staging
+        run: yarn run release:staging
+        end:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
