@@ -99,5 +99,5 @@ jobs:
           registry-url: https://npm.pkg.github.com
       - name: Release staging
         run: yarn run release:staging
-        end:
+        env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
