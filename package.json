@@ -60,45 +60,6 @@
     "format:js": "standard --fix",
     "report": "nyc report"
   },
-  "babel": {
-    "plugins": [
-      "source-map-support"
-    ],
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ]
-  },
-  "ava": {
-    "files": [
-      "**/*.spec.js",
-      "!dist/**/*",
-      "!package/**/*"
-    ],
-    "require": [
-      "@babel/register"
-    ]
-  },
-  "nyc": {
-    "exclude": [
-      "**/index.js",
-      "dist/**/*.js",
-      "package/**/*.js",
-      "examples/**/*.js",
-      "**/*.spec.js"
-    ],
-    "reporter": [
-      "html",
-      "lcov",
-      "text"
-    ]
-  },
   "nodemonConfig": {
     "ignore": [
       "**/*.spec.js",
