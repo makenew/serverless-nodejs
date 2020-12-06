@@ -236,12 +236,14 @@ The following repository secrets must be set on [GitHub Actions]:
 - `AWS_DEFAULT_REGION`: The AWS region Serverless will deploy to.
 - `AWS_ACCESS_KEY_ID`: AWS access key ID.
 - `AWS_SECRET_ACCESS_KEY`: AWS secret access key.
+- `GH_TOKEN`: A personal access token that can trigger workflows.
 
 These must be set manually.
 
 ### Secrets for GitHub Action to Cut Version (Optional)
 
-The version GitHub action requires a user with write access to the repository.
+The version GitHub action requires a user with write access to the repository
+including access to trigger workflows.
 Set these additional secrets to enable the action:
 
 - `GH_TOKEN`: A personal access token for the user.
