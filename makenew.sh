@@ -59,8 +59,8 @@ makenew () {
   read -p '> Serverless stack name (my-stack): ' mk_stack
   read -p '> Domain name (example.com): ' mk_domain
 
-  sed_delete README.md '11,124d'
-  sed_insert README.md '11i' 'TODO'
+  sed_delete README.md '10,117d'
+  sed_insert README.md '10i' 'TODO'
 
   find_replace "s/\"version\": \".*\"/\"version\": \"0.0.0\"/g"
   find_replace "s/0\.0\.0\.\.\./0.0.1.../g"
