@@ -151,10 +151,9 @@ $ nvm install
 $ yarn install
 ```
 
-Run each command below in a separate terminal window:
+Run the command below in a separate terminal window:
 
 ```
-$ yarn run lint:watch
 $ yarn run test:watch
 ```
 
