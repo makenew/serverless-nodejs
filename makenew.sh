@@ -59,9 +59,6 @@ makenew () {
   read -p '> Serverless stack name (my-stack): ' mk_stack
   read -p '> Domain name (example.com): ' mk_domain
 
-  circleci="https://circleci.com/gh/${mk_user}/${mk_repo}"
-  read -p "> Follow the CircleCI project at ${circleci} then press enter." mk_null
-
   sed_delete README.md '11,124d'
   sed_insert README.md '11i' 'TODO'
 

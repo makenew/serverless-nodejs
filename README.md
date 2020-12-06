@@ -1,7 +1,7 @@
 # Serverless Node.js Project Skeleton
 
 [![npm](https://img.shields.io/npm/v/@makenew/serverless-nodejs.svg)](https://www.npmjs.com/package/@makenew/serverless-nodejs)
-[![CircleCI](https://img.shields.io/circleci/project/github/makenew/serverless-nodejs.svg)](https://circleci.com/gh/makenew/serverless-nodejs)
+![main](https://github.com/makenew/serverless-nodejs/workflows/main/badge.svg)
 
 Package skeleton for a Node.js Serverless project on AWS Lambda.
 
@@ -21,7 +21,7 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
 - [Prettier] code.
 - Futuristic debuggable unit testing with [AVA].
 - Code coverage reporting with [Istanbul] and [nyc].
-- Continuous testing and automated package publishing with [CircleCI].
+- Continuous testing and automated package publishing with [GitHub Actions].
 - [Keep a CHANGELOG].
 - Consistent coding with [EditorConfig].
 - Badges from [Shields.io].
@@ -29,9 +29,9 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
 [AVA]: https://github.com/avajs/ava
 [AWS Lambda]: https://aws.amazon.com/lambda/
 [Babel]: https://babeljs.io/
-[CircleCI]: https://circleci.com/
 [ESLint]: https://eslint.org/
 [EditorConfig]: https://editorconfig.org/
+[GitHub Actions]: https://github.com/features/actions
 [Istanbul]: https://istanbul.js.org/
 [JavaScript Standard Style]: https://standardjs.com/
 [Keep a CHANGELOG]: https://keepachangelog.com/
@@ -64,10 +64,7 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
    This will replace the boilerplate, delete itself,
    remove the git remote, remove upstream tags,
    and stage changes for commit.
-4. Create the required CircleCI environment variables with
-   ```
-   $ .circleci/envvars.sh
-   ```
+4. Create the required GitHub repository secrets
 5. Review, commit, and push the changes to GitHub with
    ```
    $ git diff --cached
@@ -75,7 +72,7 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
    $ git remote add origin git@github.com:<user>/<new-node-lib>.git
    $ git push -u origin master
    ```
-6. Ensure the CircleCI build passes,
+6. Ensure the GitHub action passes,
    then publish the initial version of the package with
    ```
    $ nvm install
@@ -141,7 +138,7 @@ $ yarn add @makenew/serverless-nodejs
 ### Quickstart
 
 ```
-$ git clone https://github.com/makenew/serverless-nodejs.git serverless-nodejs
+$ git clone https://github.com/makenew/serverless-nodejs.git
 $ cd serverless-nodejs
 $ nvm install
 $ yarn install
@@ -203,7 +200,7 @@ $ yarn install
 ### Publishing
 
 Use the [`npm version`][npm-version] command to release a new version.
-This will push a new git tag which will trigger a CircleCI publish job.
+This will push a new git tag which will trigger a GitHub action.
 
 Publishing may be triggered using on the web
 using a [version workflow_dispatch on GitHub Actions].
@@ -213,46 +210,48 @@ using a [version workflow_dispatch on GitHub Actions].
 
 ### Deployment
 
-Deployment is triggered on CircleCI when a git tag matching
-`stage.<environment>` is created or updated.
-Use `yarn run release:<environment>` to do this automatically, e.g.,
+Serverless deployment is triggered by a release repository_dispatch on GitHub Actions.
+
+Ensure a `GITHUB_TOKEN` is set in your environment and
+use `yarn run release:<environment>` to do this automatically, e.g.,
 
 ```
-$ yarn run release:test
+$ yarn run release:staging
+$ yarn run release:production
 ```
 
-Releases may be triggered using on the web
+Deployment may be triggered using on the web
 using a [release workflow_dispatch on GitHub Actions].
 
 [npm-version]: https://docs.npmjs.com/cli/version
 [release workflow_dispatch on GitHub Actions]: https://github.com/makenew/serverless-nodejs/actions?query=workflow%3Arelease
 
-## CircleCI
+## GitHub Actions
 
-_CircleCI should already be configured: this section is for reference only._
+_GitHub Actions should already be configured: this section is for reference only._
 
-The following environment variables must be set on [CircleCI]:
+The following repository secrets must be set on [GitHub Actions]:
 
 - `NPM_TOKEN`: npm token for installing and publishing packages.
 - `AWS_DEFAULT_REGION`: The AWS region Serverless will deploy to.
 - `AWS_ACCESS_KEY_ID`: AWS access key ID.
 - `AWS_SECRET_ACCESS_KEY`: AWS secret access key.
 
-These may be set manually or by running the script `./.circleci/envvars.sh`.
+These must be set manually.
 
-[CircleCI]: https://circleci.com/
+### Secrets for GitHub Action to Cut Version (Optional)
 
-## GitHub Actions
+The version GitHub action requires a user with write access to the repository.
+Set these additional secrets to enable the action:
 
-*GitHub Actions should already be configured: this section is for reference only.*
+- `GH_TOKEN`: A personal access token for the user.
+- `GH_USER`: The Github user's username.
+- `GIT_USER_NAME`: The Github user's real name.
+- `GIT_USER_EMAIL`: The Github user's email.
+- `GPG_PASSPHRASE`: The Github user's GPG passphrase.
+- `GPG_PRIVATE_KEY`: The Github user's [GPG private key].
 
-The following secrets must be set on the GitHub repo.
-
-- `GPG_PRIVATE_KEY`: The [GPG private key].
-- `GPG_PASSPHRASE`: The GPG key passphrase.
-- `GIT_USER_NAME`: The name to set for Git commits.
-- `GIT_USER_EMAIL`: The email to set for Git commits.
-
+[GitHub Actions]: https://github.com/features/actions
 [GPG private key]: https://github.com/marketplace/actions/import-gpg#prerequisites
 
 ## Contributing
