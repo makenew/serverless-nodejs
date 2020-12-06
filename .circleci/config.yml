@@ -78,9 +78,6 @@ jobs:
       is_alpine:
         type: boolean
         default: false
-      upload_coverage:
-        type: boolean
-        default: false
     executor:
       name: node
       tag: << parameters.tag >>
@@ -94,16 +91,6 @@ jobs:
       - run:
           name: Build package
           command: yarn run build
-      - when:
-          condition: << parameters.upload_coverage >>
-          steps:
-            - run:
-                name: Upload coverage to Codecov
-                command: |
-                  if [[ -n "${CODECOV_TOKEN}" ]]; then
-                    yarn global add codecov
-                    codecov
-                  fi
   publish:
     description: Publish Node.js package
     executor:

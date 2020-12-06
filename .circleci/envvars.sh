@@ -31,12 +31,6 @@ help_npm_token () {
   echo '> Use an npm token with publish permission.'
 }
 
-help_codecov () {
-  echo
-  echo '> Get the Repository Upload Token at' \
-       "https://codecov.io/gh/${circle_repo}/settings"
-}
-
 command -v jq >/dev/null 2>&1 || \
   (echo 'jq required: https://stedolan.github.io/jq/' && exit 2)
 
@@ -74,12 +68,6 @@ main () {
     read -p '> NPM token (NPM_TOKEN): ' npm_token
   fi
 
-  codecov_token=${CI_CODECOV_TOKEN:-}
-  [[ -n "${codecov_token}" || $noninteractive == 'true' ]] || help_codecov
-  if [[ -z $codecov_token && $noninteractive != 'true' ]]; then
-    read -p '> Codecov token (CODECOV_TOKEN): ' codecov_token
-  fi
-
   aws_default_region=${CI_AWS_DEFAULT_REGION:-}
   if [[ -z $aws_default_region && $noninteractive != 'true' ]]; then
     read -p '> AWS default region (AWS_DEFAULT_REGION): ' aws_default_region
@@ -96,7 +84,6 @@ main () {
   fi
 
   envvar 'NPM_TOKEN' "${npm_token}"
-  envvar 'CODECOV_TOKEN' "${codecov_token}"
   envvar 'AWS_DEFAULT_REGION' "${aws_default_region}"
   envvar 'AWS_ACCESS_KEY_ID' "${aws_access_key_id}"
   envvar 'AWS_SECRET_ACCESS_KEY' "${aws_secret_access_key}"

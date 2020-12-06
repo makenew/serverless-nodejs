@@ -1,7 +1,6 @@
 # Serverless Node.js Project Skeleton
 
 [![npm](https://img.shields.io/npm/v/@makenew/serverless-nodejs.svg)](https://www.npmjs.com/package/@makenew/serverless-nodejs)
-[![Codecov](https://img.shields.io/codecov/c/github/makenew/serverless-nodejs.svg)](https://codecov.io/gh/makenew/serverless-nodejs)
 [![CircleCI](https://img.shields.io/circleci/project/github/makenew/serverless-nodejs.svg)](https://circleci.com/gh/makenew/serverless-nodejs)
 
 Package skeleton for a Node.js Serverless project on AWS Lambda.
@@ -22,7 +21,7 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
 - [Prettier] code.
 - Automatically lint on changes with [gulp].
 - Futuristic debuggable unit testing with [AVA].
-- Code coverage reporting with [Istanbul], [nyc], and [Codecov].
+- Code coverage reporting with [Istanbul] and [nyc].
 - Continuous testing and automated package publishing with [CircleCI].
 - [Keep a CHANGELOG].
 - Consistent coding with [EditorConfig].
@@ -33,7 +32,6 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
 [Serverless]: https://serverless.com/
 [Babel]: https://babeljs.io/
 [CircleCI]: https://circleci.com/
-[Codecov]: https://codecov.io/
 [EditorConfig]: https://editorconfig.org/
 [Istanbul]: https://istanbul.js.org/
 [JSON Lint]: https://github.com/zaach/jsonlint
@@ -238,7 +236,6 @@ _CircleCI should already be configured: this section is for reference only._
 The following environment variables must be set on [CircleCI]:
 
 - `NPM_TOKEN`: npm token for installing and publishing packages.
-- `CODECOV_TOKEN`: Codecov token for uploading coverage reports (optional).
 - `AWS_DEFAULT_REGION`: The AWS region Serverless will deploy to.
 - `AWS_ACCESS_KEY_ID`: AWS access key ID.
 - `AWS_SECRET_ACCESS_KEY`: AWS secret access key.
