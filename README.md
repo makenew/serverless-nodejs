@@ -83,9 +83,9 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
    that matches the custom deployment domains,
    e.g., this project uses a wildcard certificate for
    `*.serverless-nodejs.makenew.razorx.app`.
-   Then trigger a deploy to the test stage with
+   Then trigger a deploy to the stg stage with
    ```
-   $ yarn run release:test
+   $ yarn run release:staging
    ```
 
 [AWS Certificate Manager]: https://aws.amazon.com/certificate-manager/
