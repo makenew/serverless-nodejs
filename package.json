@@ -89,7 +89,7 @@
     "serverless-domain-manager": "^5.0.0",
     "serverless-offline": "^6.1.2",
     "serverless-webpack": "^5.2.0",
-    "webpack": "^4.44.2",
+    "webpack": "^5.10.0",
     "webpack-node-externals": "^2.5.0"
   }
 }

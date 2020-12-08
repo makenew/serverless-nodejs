@@ -7,7 +7,9 @@ module.exports = {
   entry: serverlessWebpack.lib.entries,
   target: 'node',
   mode: serverlessWebpack.lib.webpack.isLocal ? 'development' : 'production',
+  // UPSTREAM: https://github.com/serverless-heaven/serverless-webpack/issues/651#issuecomment-718787162
   optimization: {
+    concatenateModules: false,
     minimize: false
   },
   performance: {
