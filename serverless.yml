@@ -26,6 +26,7 @@ custom:
     endpointType: regional
     createRoute53Record: true
   webpack:
+    webpackConfig: webpack.config.cjs
     packager: yarn
     includeModules:
       forceExclude:

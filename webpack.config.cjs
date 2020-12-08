@@ -2,6 +2,7 @@ const path = require('path')
 
 const serverlessWebpack = require('serverless-webpack')
 const webpackNodeExternals = require('webpack-node-externals')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: serverlessWebpack.lib.entries,
@@ -17,6 +18,13 @@ module.exports = {
   },
   devtool: 'nosources-source-map',
   externals: [webpackNodeExternals()],
+  ...(serverlessWebpack.lib.webpack.isLocal
+    ? {
+        resolve: {
+          modules: [path.join(__dirname, 'node_modules')]
+        }
+      }
+    : {}),
   module: {
     rules: [
       {
@@ -29,6 +37,20 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'package.json',
+          transform(content, absoluteFrom) {
+            const pkg = JSON.parse(content.toString())
+            delete pkg.type
+            return Buffer.from(JSON.stringify(pkg))
+          }
+        }
+      ]
+    })
+  ],
   output: {
     libraryTarget: 'commonjs2',
     path: path.join(__dirname, '.webpack'),
