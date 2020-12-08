@@ -145,4 +145,4 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive
       - name: Serverless package
-        run: yarn run serverless:package
+        run: yarn run sls:package
