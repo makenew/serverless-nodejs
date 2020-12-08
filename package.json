@@ -68,6 +68,7 @@
     "aws-sdk": "2.771.0"
   },
   "dependencies": {
+    "@makenew/jsmodule": "^6.0.0",
     "aws-sdk": "2.771.0",
     "source-map-support": "^0.5.9"
   },
