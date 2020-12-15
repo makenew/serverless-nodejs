@@ -19,16 +19,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout from workflow dispatch
+      - name: Checkout
         uses: actions/checkout@v2
         if: ${{ github.event_name == 'workflow_dispatch' }}
         with:
-          ref: ${{ github.event.inputs.ref }}
-      - name: Checkout from repository dispatch
-        uses: actions/checkout@v2
-        if: ${{ github.event_name == 'repository_dispatch' }}
-        with:
-          ref: ${{ github.event.client_payload.ref }}
+          ref: ${{ github.event.inputs.ref }}${{ github.event.client_payload.ref }}
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
