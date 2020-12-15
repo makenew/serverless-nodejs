@@ -21,7 +21,7 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
 - [Prettier] code.
 - Futuristic debuggable unit testing with [AVA].
 - Code coverage reporting with [Istanbul] and [nyc].
-- Continuous testing and automated package publishing with [GitHub Actions].
+- Continuous deployment, testing, and package publishing with [GitHub Actions].
 - [Keep a CHANGELOG].
 - Consistent coding with [EditorConfig].
 - Badges from [Shields.io].
