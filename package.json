@@ -82,7 +82,7 @@
     "babel-loader": "^8.0.4",
     "babel-plugin-add-import-extension": "^1.4.3",
     "babel-plugin-source-map-support": "^2.0.1",
-    "copy-webpack-plugin": "^6.4.0",
+    "copy-webpack-plugin": "^7.0.0",
     "del-cli": "^3.0.0",
     "eslint": "^7.4.0",
     "eslint-config-standard": "^16.0.0",
