@@ -56,8 +56,8 @@
     "release:production": "curl --fail -H \"Authorization: token $GITHUB_TOKEN\" -H 'Accept: application/vnd.github.v3+json' -d '{\"event_type\":\"release\",\"client_payload\":{\"environment\":\"production\",\"ref\":\"v'$(jq -r .version < package.json)'\"}}' -X POST \"https://api.github.com/repos/$(jq -r .repository < package.json)/dispatches\"",
     "example": "node examples",
     "example:inspect": "node --inspect examples",
-    "format": "npm-run-all --serial format:prettier format:js",
-    "format:prettier": "prettier --write --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
+    "format": "npm-run-all --parallel format:*",
+    "preformat": "prettier --write --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
     "format:js": "eslint --ignore-path .gitignore --fix --ext .js,.cjs .",
     "report": "nyc report"
   },
