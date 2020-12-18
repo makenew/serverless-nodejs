@@ -57,7 +57,7 @@
     "example": "node examples",
     "example:inspect": "node --inspect examples",
     "format": "npm-run-all --parallel format:*",
-    "preformat": "prettier --write --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
+    "preformat": "prettier --write --ignore-path .gitignore '**/*.(js|cjs|json|yml|yaml|graphql)'",
     "format:js": "eslint --ignore-path .gitignore --fix --ext .js,.cjs .",
     "report": "nyc report"
   },
