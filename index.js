@@ -1,2 +1,2 @@
-export { default } from './lib.js'
-export * from './lib.js'
+export { default } from './lib/index.js'
+export * from './lib/index.js'
