@@ -31,7 +31,10 @@ module.exports = {
         test: /\.js$/,
         use: [
           {
-            loader: 'babel-loader'
+            loader: 'babel-loader',
+            options: {
+              plugins: [['babel-plugin-add-import-extension', false]]
+            }
           }
         ]
       }
