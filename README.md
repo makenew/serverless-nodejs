@@ -1,7 +1,7 @@
 # Serverless Node.js Project Skeleton
 
 [![npm](https://img.shields.io/npm/v/@makenew/serverless-nodejs.svg)](https://www.npmjs.com/package/@makenew/serverless-nodejs)
-![main](https://github.com/makenew/serverless-nodejs/workflows/main/badge.svg)
+[![GitHub Actions](https://github.com/makenew/serverless-nodejs/workflows/main/badge.svg)](https://github.com/makenew/serverless-nodejs/actions)
 
 Package skeleton for a Node.js Serverless project on AWS Lambda.
 
