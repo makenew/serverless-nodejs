@@ -61,12 +61,12 @@ jobs:
             ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive
-      - name: Serverless deploy production
+      - name: Serverless deploy to production from ${{ github.event.client_payload.ref }}${{ github.event.inputs.ref }}
         run: yarn run deploy
         if: ${{ github.event.inputs.environment == 'production' || github.event.client_payload.environment == 'production' }}
         env:
           SERVERLESS_STAGE: prod
-      - name: Serverless deploy staging
+      - name: Serverless deploy to staging from ${{ github.event.client_payload.ref }}${{ github.event.inputs.ref }}
         run: yarn run deploy
         if: ${{ github.event.inputs.environment == 'staging' || github.event.client_payload.environment == 'staging' }}
         env:
