@@ -16,6 +16,7 @@ provider:
   logRetentionInDays: 30
   apiGateway:
     shouldStartNameWithService: true
+  lambdaHashingVersion: 20201221
   environment:
     NODE_ENV: production
 
