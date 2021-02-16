@@ -5,6 +5,7 @@ frameworkVersion: '^2.0.0'
 
 plugins:
   - serverless-domain-manager
+  - serverless-jetpack
   - serverless-offline
 
 provider:
