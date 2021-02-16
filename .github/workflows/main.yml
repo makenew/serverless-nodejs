@@ -67,7 +67,7 @@ jobs:
         run: yarn install --frozen-lockfile --non-interactive
       - name: Lint
         run: yarn run lint
-  build:
+  package:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
@@ -96,4 +96,4 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive
       - name: Build
-        run: yarn run build
+        run: yarn run sls:package
