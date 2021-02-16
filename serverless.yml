@@ -6,7 +6,6 @@ frameworkVersion: '^2.0.0'
 plugins:
   - serverless-domain-manager
   - serverless-offline
-  - serverless-webpack
 
 provider:
   name: aws
@@ -26,12 +25,6 @@ custom:
     domainName: ${self:provider.stage}.${self:service}.${self:custom.domain}
     endpointType: regional
     createRoute53Record: true
-  webpack:
-    webpackConfig: webpack.config.cjs
-    packager: yarn
-    includeModules:
-      forceExclude:
-        - aws-sdk
 
 package:
   individually: true

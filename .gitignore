@@ -6,8 +6,6 @@
 # https://github.com/github/gitignore
 
 # Build directories
-.webpack
-dist
 package
 
 # Local config
