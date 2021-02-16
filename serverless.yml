@@ -29,6 +29,24 @@ custom:
 
 package:
   individually: true
+  exclude:
+    - '*/**.spec.js'
+    - .editorconfig
+    - .eslintrc.json
+    - .eslintrc.json
+    - .github/**
+    - .nvmrc
+    - .nyc_output/**
+    - .nycrc.json
+    - .prettierrc.json
+    - CHANGELOG.md
+    - README.md
+    - ava.config.js
+    - coverage/**
+    - examples/**
+    - makenew.sh
+    - test/**
+    - yarn.lock
 
 functions:
   todo:
