@@ -9,18 +9,13 @@ on:
 jobs:
   test:
     runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        node:
-          - '12'
-          - '14'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node }}
+          node-version: '14'
       - name: Get yarn cache directory
         id: yarn-cache-dir
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -44,18 +39,13 @@ jobs:
         run: yarn test
   lint:
     runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        node:
-          - '12'
-          - '14'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node }}
+          node-version: '14'
       - name: Get yarn cache directory
         id: yarn-cache-dir
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -79,18 +69,13 @@ jobs:
         run: yarn run lint
   build:
     runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        node:
-          - '12'
-          - '14'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node }}
+          node-version: '14'
       - name: Get yarn cache directory
         id: yarn-cache-dir
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -114,18 +99,13 @@ jobs:
         run: yarn run build
   serverless:
     runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        node:
-          - '12'
-          - '14'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node }}
+          node-version: '14'
       - name: Get yarn cache directory
         id: yarn-cache-dir
         run: echo "::set-output name=dir::$(yarn cache dir)"
