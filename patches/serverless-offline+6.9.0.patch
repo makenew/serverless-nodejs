@@ -1,0 +1,21 @@
+diff --git a/node_modules/serverless-offline/dist/lambda/handler-runner/in-process-runner/InProcessRunner.js b/node_modules/serverless-offline/dist/lambda/handler-runner/in-process-runner/InProcessRunner.js
+index fb88112..d738af8 100644
+--- a/node_modules/serverless-offline/dist/lambda/handler-runner/in-process-runner/InProcessRunner.js
++++ b/node_modules/serverless-offline/dist/lambda/handler-runner/in-process-runner/InProcessRunner.js
+@@ -16,7 +16,6 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return
+ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+ function _classPrivateFieldLooseBase(receiver, privateKey) { if (!Object.prototype.hasOwnProperty.call(receiver, privateKey)) { throw new TypeError("attempted to use private field on non-instance"); } return receiver; }
+-
+ var id = 0;
+
+ function _classPrivateFieldLooseKey(name) { return "__private_" + id++ + "_" + name; }
+@@ -154,7 +153,7 @@ class InProcessRunner {
+
+     const {
+       [_classPrivateFieldLooseBase(this, _handlerName)[_handlerName]]: handler
+-    } = await Promise.resolve(`${_classPrivateFieldLooseBase(this, _handlerPath)[_handlerPath]}`).then(s => _interopRequireWildcard(require(s)));
++    } = await Promise.resolve(`${_classPrivateFieldLooseBase(this, _handlerPath)[_handlerPath]}`).then(s => import(`${s}.js`));
+
+     if (typeof handler !== 'function') {
+       throw new Error(`offline: handler '${_classPrivateFieldLooseBase(this, _handlerName)[_handlerName]}' in ${_classPrivateFieldLooseBase(this, _handlerPath)[_handlerPath]} is not a function`);
