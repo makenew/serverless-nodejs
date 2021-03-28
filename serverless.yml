@@ -3,6 +3,8 @@ service: serverless-nodejs
 
 frameworkVersion: '^2.0.0'
 
+variablesResolutionMode: 20210219
+
 plugins:
   - serverless-domain-manager
   - serverless-jetpack
@@ -12,7 +14,7 @@ provider:
   name: aws
   runtime: nodejs14.x
   region: ${env:AWS_DEFAULT_REGION, 'us-east-1'}
-  stage: ${opt:stage, env:SERVERLESS_STAGE, 'stg'}
+  stage: stg
   logRetentionInDays: 30
   apiGateway:
     shouldStartNameWithService: true
