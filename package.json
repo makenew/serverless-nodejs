@@ -63,6 +63,7 @@
   "peerDependencies": {
     "aws-sdk": "^2.804.0"
   },
+  "dependencies": {},
   "devDependencies": {
     "@meltwater/examplr": "^6.0.0",
     "ava": "^3.3.0",
