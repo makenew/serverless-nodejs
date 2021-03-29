@@ -3,16 +3,19 @@ service: serverless-nodejs
 
 frameworkVersion: '^2.0.0'
 
+variablesResolutionMode: 20210219
+configValidationMode: error
+
 plugins:
   - serverless-domain-manager
+  - serverless-jetpack
   - serverless-offline
-  - serverless-webpack
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   region: ${env:AWS_DEFAULT_REGION, 'us-east-1'}
-  stage: ${opt:stage, env:SERVERLESS_STAGE, 'stg'}
+  stage: stg
   logRetentionInDays: 30
   apiGateway:
     shouldStartNameWithService: true
@@ -21,24 +24,40 @@ provider:
     NODE_ENV: production
 
 custom:
+  stage: ${opt:stage, env:SERVERLESS_STAGE, self:provider.stage}
   domain: makenew.razorx.app
   customDomain:
-    domainName: ${self:provider.stage}.${self:service}.${self:custom.domain}
+    domainName: ${self:custom.stage}.${self:service}.${self:custom.domain}
     endpointType: regional
     createRoute53Record: true
-  webpack:
-    webpackConfig: webpack.config.cjs
-    packager: yarn
-    includeModules:
-      forceExclude:
-        - aws-sdk
 
 package:
   individually: true
+  exclude:
+    - '*/**.spec.js'
+    - .editorconfig
+    - .eslintrc.json
+    - .github/**
+    - .gitignore
+    - .nvmrc
+    - .nyc_output/**
+    - .nycrc.json
+    - .prettierrc.json
+    - CHANGELOG.md
+    - README.md
+    - ava.config.json
+    - coverage/**
+    - examples/**
+    - fixtures/**
+    - makenew.sh
+    - nodemon.json
+    - serverless.yml
+    - test/**
+    - yarn.lock
 
 functions:
   todo:
-    handler: handlers/todo.default
+    handler: handlers/todo.handler
     events:
       - http:
           method: get
