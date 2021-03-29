@@ -24,6 +24,9 @@ examples/local.json
 # Temporary development files
 tmp
 
+# Serverless Offline
+.serverless-offline
+
 # npm lockfile (only yarn.lock supported)
 package-lock.json
 
