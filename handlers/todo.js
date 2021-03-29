@@ -1,8 +1,11 @@
-import { todo } from '../index.js'
+const index = import('../index.js')
 
-export default async () => ({
-  statusCode: 200,
-  body: JSON.stringify({
-    data: todo('TODO')
-  })
-})
+exports.handler = async () => {
+  const { todo } = await index
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      data: todo('TODO')
+    })
+  }
+}

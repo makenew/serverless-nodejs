@@ -57,7 +57,7 @@ package:
 
 functions:
   todo:
-    handler: handlers/todo.default
+    handler: handlers/todo.handler
     events:
       - http:
           method: get
