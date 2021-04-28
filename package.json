@@ -77,7 +77,7 @@
     "npm-run-all": "^4.1.2",
     "nyc": "^15.0.0",
     "prettier": "^2.0.2",
-    "serverless": "^2.31.0",
+    "serverless": "^2.38.0",
     "serverless-domain-manager": "^5.0.0",
     "serverless-jetpack": "^0.10.8",
     "serverless-offline": "^6.9.0"
