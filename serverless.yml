@@ -21,6 +21,7 @@ provider:
   logRetentionInDays: 30
   httpApi:
     payload: '2.0'
+    disableDefaultEndpoint: true
   apiGateway:
     shouldStartNameWithService: true
   eventBridge:
@@ -33,6 +34,7 @@ custom:
   domain: makenew.razorx.app
   customDomain:
     domainName: ${sls:stage}.${self:service}.${self:custom.domain}
+    apiType: http
     endpointType: regional
     createRoute53Record: true
 
@@ -64,6 +66,6 @@ functions:
   todo:
     handler: handlers/todo.handler
     events:
-      - http:
+      - httpApi:
           method: get
           path: /todo
