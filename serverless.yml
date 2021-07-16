@@ -19,6 +19,8 @@ provider:
   region: ${env:AWS_DEFAULT_REGION, 'us-east-1'}
   stage: stg
   logRetentionInDays: 30
+  httpApi:
+    payload: '2.0'
   apiGateway:
     shouldStartNameWithService: true
   eventBridge:
