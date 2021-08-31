@@ -1,0 +1,12 @@
+{
+  "name": "Serverless Node.js",
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14",
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode"
+  ],
+  "postCreateCommand": "yarn install",
+  "forwardPorts": [3000, 3002],
+  "remoteUser": "node"
+}
