@@ -1,6 +1,6 @@
 {
   "name": "@makenew/serverless-nodejs",
-  "version": "7.4.1",
+  "version": "7.4.2",
   "description": "Package skeleton for a Node.js Serverless project on AWS Lambda.",
   "type": "module",
   "main": "index.js",
