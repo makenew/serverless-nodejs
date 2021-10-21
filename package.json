@@ -35,8 +35,8 @@
     "test:watch": "ava --watch",
     "test:debug": "ava debug --break",
     "lint": "npm-run-all --parallel lint:*",
-    "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.(js|cjs|json|yml|yaml|graphql)'",
-    "lint:js": "eslint --ignore-path .gitignore --ext .js,.cjs .",
+    "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.(js|cjs|mjs|json|yml|yaml|graphql)'",
+    "lint:js": "eslint --ignore-path .gitignore --ext .js,.cjs,.mjs .",
     "preversion": "npm-run-all --parallel lint test sls:package",
     "postversion": "git push --follow-tags",
     "sls:package": "serverless package",
@@ -50,8 +50,8 @@
     "example": "node examples",
     "example:inspect": "node --inspect examples",
     "format": "npm-run-all --parallel format:*",
-    "preformat": "prettier --write --ignore-path .gitignore '**/*.(js|cjs|json|yml|yaml|graphql)'",
-    "format:js": "eslint --ignore-path .gitignore --fix --ext .js,.cjs .",
+    "preformat": "prettier --write --ignore-path .gitignore '**/*.(js|cjs|mjs|json|yml|yaml|graphql)'",
+    "format:js": "eslint --ignore-path .gitignore --fix --ext .js,.cjs,.mjs .",
     "report": "nyc report"
   },
   "engines": {
