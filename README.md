@@ -70,20 +70,16 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
    $ git remote add origin git@github.com:<user>/<new-node-lib>.git
    $ git push -u origin master
    ```
-6. Ensure the GitHub action passes,
-   then publish the initial version of the package with
+6. Ensure a valid certificate exists in [AWS Certificate Manager]
+   that matches the custom deployment domains,
+   e.g., this project uses a wildcard certificate for
+   `*.serverless-nodejs.makenew.razorx.app`.
+7. Ensure the GitHub action passes,
+   then publish and release the initial version with
    ```
    $ nvm install
    $ yarn install
    $ npm version patch
-   ```
-7. Ensure a valid certificate exists in [AWS Certificate Manager]
-   that matches the custom deployment domains,
-   e.g., this project uses a wildcard certificate for
-   `*.serverless-nodejs.makenew.razorx.app`.
-   Then trigger a deploy to the stg stage with
-   ```
-   $ yarn run release:staging
    ```
 
 [AWS Certificate Manager]: https://aws.amazon.com/certificate-manager/
@@ -210,18 +206,9 @@ using a [version workflow_dispatch on GitHub Actions].
 
 Serverless deployment is triggered by a release repository_dispatch on GitHub Actions.
 
-Ensure a `GITHUB_TOKEN` is set in your environment and
-use `yarn run release:<environment>` to do this automatically, e.g.,
-
-```
-$ yarn run release:staging
-$ yarn run release:production
-```
-
 Deployment may be triggered using on the web
 using a [release workflow_dispatch on GitHub Actions].
 
-[npm-version]: https://docs.npmjs.com/cli/version
 [release workflow_dispatch on GitHub Actions]: https://github.com/makenew/serverless-nodejs/actions?query=workflow%3Arelease
 
 ## GitHub Actions
