@@ -75,7 +75,7 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
    e.g., this project uses a wildcard certificate for
    `*.serverless-nodejs.makenew.razorx.app`.
 7. Ensure the GitHub action passes,
-   then publish and release the initial version with
+   then release the initial version with
    ```
    $ nvm install
    $ yarn install
