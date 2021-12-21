@@ -54,8 +54,6 @@ jobs:
             ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Format
         run: yarn run format
       - name: Commit
