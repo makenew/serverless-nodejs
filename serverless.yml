@@ -8,7 +8,6 @@ configValidationMode: error
 
 plugins:
   - serverless-domain-manager
-  - serverless-offline
 
 provider:
   name: aws
