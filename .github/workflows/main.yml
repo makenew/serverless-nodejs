@@ -9,6 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-20.04
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -39,6 +40,7 @@ jobs:
         run: yarn test
   lint:
     runs-on: ubuntu-20.04
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -69,6 +71,7 @@ jobs:
         run: yarn run lint
   package:
     runs-on: ubuntu-20.04
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v2
