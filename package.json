@@ -62,7 +62,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@meltwater/examplr": "^6.1.0",
+    "@meltwater/examplr": "^7.0.0",
     "ava": "^4.0.1",
     "aws-sdk": "2.880.0",
     "eslint": "^7.4.0",
