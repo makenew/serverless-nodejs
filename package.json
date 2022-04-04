@@ -54,17 +54,10 @@
   "engines": {
     "node": ">=14.15.0"
   },
-  "resolutions": {
-    "aws-sdk": "2.952.0"
-  },
-  "peerDependencies": {
-    "aws-sdk": "^2.952.0"
-  },
   "dependencies": {},
   "devDependencies": {
     "@meltwater/examplr": "^7.0.0",
     "ava": "^4.0.1",
-    "aws-sdk": "2.880.0",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.0",
