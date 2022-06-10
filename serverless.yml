@@ -48,7 +48,7 @@ package:
     - '!nodemon.json'
     - '!serverless.yml'
     - '!test/**'
-    - '!yarn.lock'
+    - '!package-lock.json'
 
 functions:
   todo:
