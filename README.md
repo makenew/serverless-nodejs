@@ -19,7 +19,7 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
 - Linting with the [JavaScript Standard Style] using [ESLint].
 - [Prettier] code.
 - Futuristic debuggable unit testing with [AVA].
-- Code coverage reporting with [Istanbul] and [nyc].
+- Code coverage reporting with [Istanbul] and [c8].
 - Continuous deployment, testing, and package publishing with [GitHub Actions].
 - [Keep a CHANGELOG].
 - Consistent coding with [EditorConfig].
@@ -37,10 +37,10 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
 [Prettier]: https://prettier.io/
 [Serverless]: https://serverless.com/
 [Shields.io]: https://shields.io/
+[c8]: https://github.com/bcoe/c8
 [Yarn]: https://yarnpkg.com/
 [examplr]: https://github.com/meltwater/node-examplr
 [npm]: https://www.npmjs.com/
-[nyc]: https://github.com/istanbuljs/nyc
 [serverless-domain-manager]: https://github.com/amplify-education/serverless-domain-manager
 
 ### Bootstrapping a new project
