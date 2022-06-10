@@ -6,9 +6,6 @@ frameworkVersion: '^2.66.2'
 variablesResolutionMode: 20210326
 configValidationMode: error
 
-plugins:
-  - serverless-domain-manager
-
 provider:
   name: aws
   architecture: arm64
@@ -28,14 +25,6 @@ provider:
   lambdaHashingVersion: 20201221
   environment:
     NODE_ENV: production
-
-custom:
-  domain: makenew.razorx.app
-  customDomain:
-    domainName: ${sls:stage}.${self:service}.${self:custom.domain}
-    apiType: http
-    endpointType: regional
-    createRoute53Record: true
 
 package:
   individually: true
@@ -64,7 +53,3 @@ package:
 functions:
   todo:
     handler: handlers/todo.handler
-    events:
-      - httpApi:
-          method: get
-          path: /todo

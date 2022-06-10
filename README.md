@@ -11,8 +11,7 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
 
 ### Features
 
-- Deploy to [AWS Lambda] under a
-  [custom domain][serverless-domain-manager] with [Serverless].
+- Deploy to [AWS Lambda] with [Serverless].
 - [Node.js]'s [npm] package structure.
 - Fast, reliable, and secure dependency management with [Yarn].
 - Examples with configurable options and arguments powered by [examplr].
@@ -41,7 +40,6 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
 [Yarn]: https://yarnpkg.com/
 [examplr]: https://github.com/meltwater/node-examplr
 [npm]: https://www.npmjs.com/
-[serverless-domain-manager]: https://github.com/amplify-education/serverless-domain-manager
 
 ### Bootstrapping a new project
 
@@ -70,19 +68,13 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
    $ git remote add origin git@github.com:<user>/<new-node-lib>.git
    $ git push -u origin master
    ```
-6. Ensure a valid certificate exists in [AWS Certificate Manager]
-   that matches the custom deployment domains,
-   e.g., this project uses a wildcard certificate for
-   `*.serverless-nodejs.makenew.razorx.app`.
-7. Ensure the GitHub action passes,
+6. Ensure the GitHub action passes,
    then release the initial version with
    ```
    $ nvm install
    $ yarn install
    $ npm version patch
    ```
-
-[AWS Certificate Manager]: https://aws.amazon.com/certificate-manager/
 
 ### Updating from this skeleton
 
