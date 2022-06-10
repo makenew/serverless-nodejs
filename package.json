@@ -66,6 +66,6 @@
     "eslint-plugin-promise": "^6.0.0",
     "npm-run-all": "^4.1.2",
     "prettier": "^2.3.0",
-    "serverless": "^2.66.2"
+    "serverless": "^3.19.0"
   }
 }

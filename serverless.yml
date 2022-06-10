@@ -1,15 +1,15 @@
 ---
 service: serverless-nodejs
 
-frameworkVersion: '^2.66.2'
+frameworkVersion: '^3.17.0'
 
-variablesResolutionMode: 20210326
 configValidationMode: error
 
 provider:
   name: aws
+  deploymentMethod: direct
   architecture: arm64
-  runtime: nodejs14.x
+  runtime: nodejs16.x
   region: ${env:AWS_DEFAULT_REGION, 'us-east-1'}
   stage: stg
   logRetentionInDays: 30
@@ -18,11 +18,8 @@ provider:
     disableDefaultEndpoint: true
   apiGateway:
     shouldStartNameWithService: true
-  eventBridge:
-    useCloudFormation: true
   deploymentBucket:
     blockPublicAccess: true
-  lambdaHashingVersion: 20201221
   environment:
     NODE_ENV: production
 
@@ -50,4 +47,5 @@ package:
 
 functions:
   todo:
+    url: true
     handler: handlers/todo.handler
