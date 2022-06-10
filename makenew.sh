@@ -61,8 +61,7 @@ makenew () {
   sed_delete README.md '10,103d'
   sed_insert README.md '10i' 'TODO'
 
-  find_replace "s/\"version\": \".*\"/\"version\": \"0.0.0\"/g"
-  find_replace "s/0\.0\.0\.\.\./0.0.1.../g"
+  find_replace "s/^  \"version\": \".*\"/  \"version\": \"0.0.0\"/g"
   find_replace "s/Serverless Node.js Project Skeleton/${mk_title}/g"
   find_replace "s/Package skeleton for a Node.js Serverless project on AWS Lambda\./${mk_description}/g"
   find_replace "s/Evan Sosenko/${mk_author}/g"
