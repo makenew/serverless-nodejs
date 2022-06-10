@@ -1,9 +1,6 @@
-'use strict'
+import { todo } from '../index.js'
 
-const index = import('../index.js')
-
-exports.handler = async () => {
-  const { todo } = await index
+export default async () => {
   return {
     statusCode: 200,
     body: JSON.stringify({

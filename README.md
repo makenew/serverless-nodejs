@@ -11,15 +11,14 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
 
 ### Features
 
-- Deploy to [AWS Lambda] under a
-  [custom domain][serverless-domain-manager] with [Serverless].
+- Deploy to [AWS Lambda] with [Serverless].
 - [Node.js]'s [npm] package structure.
-- Fast, reliable, and secure dependency management with [Yarn].
+- Package management with [npm].
 - Examples with configurable options and arguments powered by [examplr].
 - Linting with the [JavaScript Standard Style] using [ESLint].
 - [Prettier] code.
 - Futuristic debuggable unit testing with [AVA].
-- Code coverage reporting with [Istanbul] and [nyc].
+- Code coverage reporting with [Istanbul] and [c8].
 - Continuous deployment, testing, and package publishing with [GitHub Actions].
 - [Keep a CHANGELOG].
 - Consistent coding with [EditorConfig].
@@ -37,11 +36,9 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
 [Prettier]: https://prettier.io/
 [Serverless]: https://serverless.com/
 [Shields.io]: https://shields.io/
-[Yarn]: https://yarnpkg.com/
+[c8]: https://github.com/bcoe/c8
 [examplr]: https://github.com/meltwater/node-examplr
 [npm]: https://www.npmjs.com/
-[nyc]: https://github.com/istanbuljs/nyc
-[serverless-domain-manager]: https://github.com/amplify-education/serverless-domain-manager
 
 ### Bootstrapping a new project
 
@@ -70,19 +67,13 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
    $ git remote add origin git@github.com:<user>/<new-node-lib>.git
    $ git push -u origin master
    ```
-6. Ensure a valid certificate exists in [AWS Certificate Manager]
-   that matches the custom deployment domains,
-   e.g., this project uses a wildcard certificate for
-   `*.serverless-nodejs.makenew.razorx.app`.
-7. Ensure the GitHub action passes,
+6. Ensure the GitHub action passes,
    then release the initial version with
    ```
    $ nvm install
-   $ yarn install
+   $ npm install
    $ npm version patch
    ```
-
-[AWS Certificate Manager]: https://aws.amazon.com/certificate-manager/
 
 ### Updating from this skeleton
 
@@ -118,14 +109,7 @@ Add this as a dependency to your project using [npm] with
 $ npm install @makenew/serverless-nodejs
 ```
 
-or using [Yarn] with
-
-```
-$ yarn add @makenew/serverless-nodejs
-```
-
 [npm]: https://www.npmjs.com/
-[Yarn]: https://yarnpkg.com/
 
 ## Development and Testing
 
@@ -135,21 +119,21 @@ $ yarn add @makenew/serverless-nodejs
 $ git clone https://github.com/makenew/serverless-nodejs.git
 $ cd serverless-nodejs
 $ nvm install
-$ yarn install
+$ npm install
 ```
 
 Run the command below in a separate terminal window:
 
 ```
-$ yarn run test:watch
+$ npm run test:watch
 ```
 
 Primary development tasks are defined under `scripts` in `package.json`
-and available via `yarn run`.
+and available via `npm run`.
 View them with
 
 ```
-$ yarn run
+$ npm run
 ```
 
 ### Source code
@@ -165,7 +149,7 @@ $ git clone git@github.com:makenew/serverless-nodejs.git
 
 ### Requirements
 
-You will need [Node.js] with [npm], [Yarn], and a [Node.js debugging] client.
+You will need [Node.js] with [npm] and a [Node.js debugging] client.
 
 Be sure that all commands run under the correct Node version, e.g.,
 if using [nvm], install the correct version with
@@ -183,7 +167,7 @@ $ nvm use
 Install the development dependencies with
 
 ```
-$ yarn install
+$ npm install
 ```
 
 [Node.js]: https://nodejs.org/

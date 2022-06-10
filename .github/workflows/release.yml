@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.inputs.ref }}${{ github.event.client_payload.ref }}
+          ref: ${{ github.event.client_payload.ref }}${{ github.event.inputs.ref }}
       - name: Start deployment
         uses: bobheadxi/deployments@v0.6.0
         id: deployment
@@ -42,33 +42,24 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
-      - name: Get yarn cache directory
-        id: yarn-cache-dir
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: Yarn cache
+          node-version: '16'
+      - name: Cache npm packages
         uses: actions/cache@v2
         with:
-          path: ${{ steps.yarn-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Node modules cache
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
+            ${{ runner.os }}-node-
+            ${{ runner.os }}-
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --non-interactive
+        run: npm ci
       - name: Serverless deploy to production from ${{ github.event.client_payload.ref }}${{ github.event.inputs.ref }}
-        run: yarn run deploy
+        run: npm run deploy
         if: ${{ github.event.inputs.environment == 'production' || github.event.client_payload.environment == 'production' }}
         env:
           SERVERLESS_STAGE: prod
       - name: Serverless deploy to staging from ${{ github.event.client_payload.ref }}${{ github.event.inputs.ref }}
-        run: yarn run deploy
+        run: npm run deploy
         if: ${{ github.event.inputs.environment == 'staging' || github.event.client_payload.environment == 'staging' }}
         env:
           SERVERLESS_STAGE: stg
