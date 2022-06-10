@@ -21,7 +21,7 @@
     "email": "razorx@evansosenko.com"
   },
   "files": [
-    "yarn.lock",
+    "package-lock.json",
     "index.js",
     "lib",
     "handlers",
