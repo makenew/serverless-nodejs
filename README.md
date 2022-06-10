@@ -13,7 +13,7 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
 
 - Deploy to [AWS Lambda] with [Serverless].
 - [Node.js]'s [npm] package structure.
-- Fast, reliable, and secure dependency management with [Yarn].
+- Package management with [npm].
 - Examples with configurable options and arguments powered by [examplr].
 - Linting with the [JavaScript Standard Style] using [ESLint].
 - [Prettier] code.
@@ -37,7 +37,6 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
 [Serverless]: https://serverless.com/
 [Shields.io]: https://shields.io/
 [c8]: https://github.com/bcoe/c8
-[Yarn]: https://yarnpkg.com/
 [examplr]: https://github.com/meltwater/node-examplr
 [npm]: https://www.npmjs.com/
 
@@ -72,7 +71,7 @@ Bootstrap a new Node.js Serverless project in five minutes or less.
    then release the initial version with
    ```
    $ nvm install
-   $ yarn install
+   $ npm install
    $ npm version patch
    ```
 
@@ -110,14 +109,7 @@ Add this as a dependency to your project using [npm] with
 $ npm install @makenew/serverless-nodejs
 ```
 
-or using [Yarn] with
-
-```
-$ yarn add @makenew/serverless-nodejs
-```
-
 [npm]: https://www.npmjs.com/
-[Yarn]: https://yarnpkg.com/
 
 ## Development and Testing
 
@@ -127,21 +119,21 @@ $ yarn add @makenew/serverless-nodejs
 $ git clone https://github.com/makenew/serverless-nodejs.git
 $ cd serverless-nodejs
 $ nvm install
-$ yarn install
+$ npm install
 ```
 
 Run the command below in a separate terminal window:
 
 ```
-$ yarn run test:watch
+$ npm run test:watch
 ```
 
 Primary development tasks are defined under `scripts` in `package.json`
-and available via `yarn run`.
+and available via `npm run`.
 View them with
 
 ```
-$ yarn run
+$ npm run
 ```
 
 ### Source code
@@ -157,7 +149,7 @@ $ git clone git@github.com:makenew/serverless-nodejs.git
 
 ### Requirements
 
-You will need [Node.js] with [npm], [Yarn], and a [Node.js debugging] client.
+You will need [Node.js] with [npm] and a [Node.js debugging] client.
 
 Be sure that all commands run under the correct Node version, e.g.,
 if using [nvm], install the correct version with
@@ -175,7 +167,7 @@ $ nvm use
 Install the development dependencies with
 
 ```
-$ yarn install
+$ npm install
 ```
 
 [Node.js]: https://nodejs.org/
