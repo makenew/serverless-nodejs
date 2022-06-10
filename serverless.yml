@@ -43,6 +43,7 @@ package:
     - '!makenew.sh'
     - '!serverless.yml'
     - '!test/**'
+    - '!.devcontainer/**'
     - '!package-lock.json'
 
 functions:
