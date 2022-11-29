@@ -180,8 +180,7 @@ $ npm install
 Use the [`npm version`][npm-version] command to release a new version.
 This will push a new git tag which will trigger a GitHub action.
 
-Publishing may be triggered using on the web
-using a [version workflow_dispatch on GitHub Actions].
+Publishing may be triggered using a [version workflow_dispatch on GitHub Actions].
 
 [npm-version]: https://docs.npmjs.com/cli/version
 [version workflow_dispatch on GitHub Actions]: https://github.com/makenew/serverless-nodejs/actions?query=workflow%3Aversion
@@ -190,8 +189,7 @@ using a [version workflow_dispatch on GitHub Actions].
 
 Serverless deployment is triggered by a release repository_dispatch on GitHub Actions.
 
-Deployment may be triggered using on the web
-using a [release workflow_dispatch on GitHub Actions].
+Deployment may be triggered using a [release workflow_dispatch on GitHub Actions].
 
 [release workflow_dispatch on GitHub Actions]: https://github.com/makenew/serverless-nodejs/actions?query=workflow%3Arelease
 
