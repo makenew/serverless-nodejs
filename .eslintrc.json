@@ -1,4 +1,24 @@
 {
+  "$schema": "https://json.schemastore.org/eslintrc.json",
   "root": true,
-  "extends": ["standard", "prettier"]
+  "extends": ["standard", "prettier"],
+  "plugins": ["simple-import-sort", "unused-imports"],
+  "rules": {
+    "no-console": "error",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "import/extensions": ["error", "ignorePackages"],
+    "import/no-duplicates": ["error", { "prefer-inline": true }],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
+  }
 }
