@@ -1,3 +1,6 @@
 export default {
-  files: ['**/*.spec.js', '!package/**/*']
+  files: ['**/*.spec.js', '**/*.test.js', '!package/**/*'],
+  ignoreChanges: {
+    watchMode: ['tmp/**/*']
+  }
 }

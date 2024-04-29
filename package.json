@@ -53,8 +53,8 @@
   },
   "devDependencies": {
     "@meltwater/examplr": "^7.0.0",
-    "ava": "^4.0.1",
-    "c8": "^7.11.0",
+    "ava": "^6.1.2",
+    "c8": "^9.1.0",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard": "^17.0.0",
